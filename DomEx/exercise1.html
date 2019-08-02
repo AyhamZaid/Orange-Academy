@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #1: Changing text</title>
+    <style>
+        #mydiv {
+            width: 500px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: yellow;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function changeWord(element, word) {
+            element.innerHTML = word;
+        }
+    </script>
+</head>
+<body>
+<div id="mydiv"
+     onmouseover="changeWord(this, 'Can I help you Ayham?');"
+     onmouseout="changeWord(this, 'Just give me Green burger!');">
+    Hello Ayham
+</div>
+</body>
+</html>

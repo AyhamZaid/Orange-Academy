@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #5: Input check</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+        .err {
+            color: red;
+            font-size: 0.7em;
+        }
+    </style>
+    <script>
+        function checkPasswords() {
+            var pass1 = document.getElementById("password1").value;
+            var pass2 = document.getElementById("password2").value;
+            var pass1check = document.getElementById("pass1_check");
+            var pass2check = document.getElementById("pass2_check");
+            var Error = false;
+            if (pass1.length > 0) {
+                if (pass1.length < 6) {
+                    pass1check.innerHTML = "Toooo short brooo try again";
+                    Error = true;
+                }
+                else {
+                    pass1check.innerHTML = "";
+                }
+                if (pass2.length > 0 && pass1 !== pass2) {
+                    pass2check.innerHTML = "don't match please focus";
+                    Error = true;
+                }
+                else {
+                    pass2check.innerHTML = "";
+                }
+            }
+            else {
+                pass1check.innerHTML = "";
+            }
+            var btn = document.getElementById("submitBtn");
+            if (pass1.length > 0 && pass2.length > 0 && !Error) {
+                btn.style.display = "";
+            }
+            else {
+                btn.style.display = "none";
+            }
+        }
+        window.onload = function () {
+            document.getElementById("submitBtn").style.display = "none";
+        }
+    </script>
+
+</head>
+<body>
+
+<form name="pw">
+    <table>
+        <tr>
+            <td>Password (min 6 characters):</td>
+            <td><input type="password" name="password1" id="password1" size="10" placeholder="Password" onkeyup="checkPasswords()"></td>
+            <td>
+                <div id="pass1_check" class="err"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Repeat password:</td>
+            <td><input type="password" name="password2" id="password2" size="10" placeholder="Password" onkeyup="checkPasswords()"></td>
+            <td>
+                <div id="pass2_check" class="err"></div>
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Submit" id="submitBtn"/>
+</form>
+
+</body>
+</html>
+
+
