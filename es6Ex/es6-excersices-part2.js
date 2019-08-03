@@ -1,4 +1,4 @@
-//Excersice 1:Write a function that when given an array sums only the odd values and returns that sum. Assume the array is an array of integers.*/
+	//Excersice 1:Write a function that when given an array sums only the odd values and returns that sum. Assume the array is an array of integers.*/
 
 function oddNumber(array){
 	let sum = 0;
@@ -74,7 +74,8 @@ var exampleFunction = function() {
 
 exampleFunction();*/
 
-
+let exampleFunction =()=>console.log('🙌');
+exampleFunction();
 /*
  * Exercise 5:Make a function that takes array of numbers that are doubles of the first array
  *
@@ -85,6 +86,17 @@ exampleFunction();*/
  * Result:
  * [4, 10, 200]
 */
+let doubleNumbers = (parm) => {
+  
+
+  for (const i in parm){
+    
+      num=parm.map(n => n*2);
+    
+  }
+  return num;
+}
+console.log(doubleNumbers([2, 5, 100]));
 
 
 /*
@@ -98,6 +110,15 @@ exampleFunction();*/
  *  ["John", "Jacob", "Jingleheimer", "Schmidt"]
 */
 
+const names = ["john", "JACOB", "jinGleHeimer", "schmidt"];
+let capitalizeNames =()=>{
+for (let name of names) {
+    n = names.map(a => a.charAt(0).toUpperCase() + a.substr(1));
+  
+}
+ return n
+}
+    console.log(capitalizeNames(names));
 
 
 
@@ -110,25 +131,46 @@ Examples:
 */
 
 
-
+let even=(a) =>a.filter(function(val){return val%2===0})
+var arr = [5,1,2,3,10];
+console.log(even(arr));
 
 /*Exercise 8: Write a JavaScript function to find the first not repeated character. Go to the editor
 Sample arguments : 'abacddbec' 
 Expected output : 'e' 
 */
 
-
+let repeated =(str) =>{
+    for (let ch of str) {
+        if (str.indexOf(ch) === str.lastIndexOf(ch))  
+          return ch;
+    }
+}
+console.log(repeated('abacddbec'));
 
 
 
 /*Exercise 9:Use destructuring to initialize the variables `one`, `two`, and `three` with the colors from the `things` array.
  */
 
+// const things = ['red', 'basketball', 'paperclip', 'green', 'computer', 'earth', 'udacity', 'blue', 'dogs'];
+
+// const one = things;
+// const two = '';
+// const three = '';
+
+// const colors = `List of Colors
+// 1. ${one}
+// 2. ${two}
+// 3. ${three}`;
+
+// console.log(colors);
+
 const things = ['red', 'basketball', 'paperclip', 'green', 'computer', 'earth', 'udacity', 'blue', 'dogs'];
 
-const one = things;
-const two = '';
-const three = '';
+const one =things[0];
+const two = things[3];
+const three = things[7];
 
 const colors = `List of Colors
 1. ${one}
@@ -137,18 +179,15 @@ const colors = `List of Colors
 
 console.log(colors);
 
-
 /*Exercise 10:Replace the variable declarations using let or const. */
-var CHARACTER_LIMIT = 255;
-var posts = [
-	"#DeepLearning transforms everything from self-driving cars to language translations. AND it's our new Nanodegree!",
-	"Within your first week of the VR Developer Nanodegree Program, you'll make your own virtual reality app",
-	"I just finished @udacity's Front-End Web Developer Nanodegree. Check it out!"
+let CHARACTER_LIMIT = 255;
+let posts = [
+	`#DeepLearning transforms everything from self-driving cars to language translations. AND it s our new Nanodegree!,
+	Within your first week of the VR Developer Nanodegree Program, you ll make your own virtual reality app,
+	I just finished @udacitys Front-End Web Developer Nanodegree. Check it out!`
 ];
-
-// prints posts to the console
-function displayPosts() {
-	for (var i = 0; i < posts.length; i++) {
+let displayPosts=()=> {
+	for (let i = 0; i < posts.length; i++) {
 		console.log(posts[i].slice(0, CHARACTER_LIMIT));
 	}
 }
