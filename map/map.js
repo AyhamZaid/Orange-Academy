@@ -11,7 +11,7 @@ Instructions:
  *
  * Test Case: 
  *
- * console.log(doubleNumbers([2, 5, 100]));
+ * console.log(doubleNubers([2, 5, 100]));
  * 
  * Result:
  * [4, 10, 200]
