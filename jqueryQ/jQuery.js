@@ -50,7 +50,7 @@ $(document).ready(function(){
     $("#btn3").click(function(){
         $("#div1").fadeToggle(3000);
         $("#div2").fadeToggle(6000);
-        $("#div3").fadeToggle(12000);
+        $("#div3").fadeToggle(2000);
 
 
     });

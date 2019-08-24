@@ -1,0 +1,104 @@
+
+
+// star =(n)=>{
+//   var acc ="*"
+//   for(i=1; i <= n; i++){
+//   console.log(acc);
+//   acc=acc+"*";
+//   }
+// }
+// star (10)
+
+
+//  factorial =(n)=> {
+//     if(n == 1) {
+//         return n ;
+//     } 
+//     else {
+
+//         return (n * factorial(n - 1));
+//     }
+// }
+ 
+// console.log(factorial(8));
+// num = (n1,n2) =>{
+// if (n1==n2-1){
+//   return n1
+// }
+// else{
+//   return((console.log(n1+1)) + num(n1+1,n2));
+
+// }
+// }
+// num(5,12);
+ 
+
+
+// names=["Mohammad","Ayham","asem","mohammad","aLi"]
+
+//  newNames = names.filter(name=>name !== name.toLowerCase())
+// console.log(newNames);
+
+let ages =[1,23,23,12,13,2,13,23,12,13]
+var ag = ages.map(x=>x+50)
+let newVslues =ages.filter(x=>x>20).map(x=>x+5)
+
+console.log(ag);
+console.log(newVslues);
+
+// var stringe =["A","y","h","a","m"," ", "Z","a","i","d"];
+// let names = stringe.reduce((acc,cv)=>acc + cv)
+// console.log(names);
+
+// Using Reduce
+// Create a function called avgLength
+// that takes an array of objects of strings and key as a parameter
+// and return the avg of the length of this key inside this objects
+// var arrOfObj4 = [
+//   { name: "alex", food: "fried chiken" },
+//   { name: "mercer", food: "pizaa" },
+//   { name: "alice", food: "burger" },
+//   { name: "zaheer", food: "hot dog" },
+//   { name: "elizabeth", food: "eggs" }
+// ]
+// Ex: avgLength(arrOfObj4,"name")
+// => 6
+// Ex: avgLength(arrOfObj4,"food")
+// => 6.8
+
+
+var arr=[
+  { name: "alex", food: "fried chiken" },
+  { name: "mercer", food: "pizaa" },
+  { name: "alice", food: "burger" },
+  { name: "zaheer", food: "hot dog" },
+  { name: "elizabeth", food: "eggs" }
+]
+
+avgLength =(arr,key)=>{
+var avg =arr.reduce((acc,cv)=>
+acc + cv[key].length,0 )
+/arr.length;
+return avg
+}
+
+console.log(avgLength(arr,'food'));
+
+// function arrOfObject(arrObjects,key)
+// {
+//     let avgKey=arrObjects.reduce((acc,cv)=>acc + cv[key].length,0)/arrObjects.length
+
+
+//     return avgKey;
+// }
+
+function avgLength(arrayOfObject,key)
+{
+
+    let fillter = arrayOfObject.filter(newItems=>newItems[key]);
+    let AVG = fillter.reduce((acc,cv)=>acc+cv[key].length,0) / fillter.length
+
+
+
+    return AVG;
+}

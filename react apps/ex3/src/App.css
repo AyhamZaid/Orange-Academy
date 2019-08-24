@@ -1,0 +1,43 @@
+body {
+   
+    background-color: black;
+   
+}
+
+.container {
+    background-color: white;
+    width: 400px;
+    padding: 10px;
+    margin-top: 10px;
+    padding-bottom: 40px;
+    min-height: 700px;
+    border: 1px solid blue;
+    
+}
+
+
+#header{
+    border: 1px solid green;
+    width: 240px;
+    margin: 0 auto;
+    padding: 5px;
+    margin-bottom: 15px;
+    
+}
+
+ul {
+    padding-left: 0;
+     
+}
+
+
+li {
+    list-style-type: none;
+    border: solid gray 1px;
+    width: 60%;
+    margin: 5px auto;
+    text-align: left;
+    padding: 3%;
+    padding-left: 2%;
+   
+}

@@ -1,0 +1,23 @@
+.card {
+    height: 30% !important;
+    width: 80%;
+    margin: 5px auto;
+    background-color: blanchedalmond;
+    /* font-size: .8rem; */
+}
+
+.card * {
+    font-size: 15px;
+}
+
+.card-header {
+    background-color: darkred;
+    color:darkred;
+    font-size: 1rem
+}
+
+button {
+    background-color: darkred !important;
+    color: white !important;
+    border: 1px solid  darkred !important;
+}
